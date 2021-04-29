@@ -1,0 +1,61 @@
+doctype html
+html(lang="ru")
+
+    include includes/head.pug
+
+    body.bg_light-blue
+
+        main.reviews__main
+
+            //- Reviews header
+            section
+
+                .wrap.bg_white
+                    
+                    .container
+
+                        .rating
+
+                            h2.rating__header.text_w500 Общий рейтинг компании
+
+                            .rating__quality-details
+
+                                .rating__quality
+                                    .rating__quality-number
+                                        .text_w500 4.4
+                                        .rating__quality-number-2 /5
+                                    .rating__quality-stars.five-stars(style="--rating: 4.4;", aria-label="Общий рейтинг компании")
+                                    span.text_13.text_gray 6 отзывов
+
+                                ul.rating__details
+                                    li.rating__details-item
+                                        span.rating__details-header.text_black Скорость работы
+                                        .rating__details-bar.progress-bar
+                                            .progress-bar_green(style="--rating-bar: 4.2;", aria-label="Скорость работы")
+                                        .rating__details-number.text_16.text_w500.text_lh24 4.2
+                                    li.rating__details-item
+                                        span.rating__details-header.text_black Качество обслуживания
+                                        .rating__details-bar.progress-bar
+                                            .progress-bar_yellow(style="--rating-bar: 3.1;", aria-label="Скорость работы")
+                                        .rating__details-number.text_16.text_w500.text_lh24 3.1
+                                    li.rating__details-item
+                                        span.rating__details-header.text_black Ценовая политика
+                                        .rating__details-bar.progress-bar
+                                            .progress-bar_red(style="--rating-bar: 1.6;", aria-label="Скорость работы")
+                                        .rating__details-number.text_16.text_w500.text_lh24 1.6
+                                    
+            //- Reviews
+            section
+
+                .wrap
+
+                    .container
+
+                        .reviews
+
+                            h2.reviews__header.h2.text_black.text_16.text_w500 Отзывы о компании ООО “Ковалевский”
+
+                            include includes/review.pug
+                            include includes/review.pug
+                            include includes/review.pug
+
